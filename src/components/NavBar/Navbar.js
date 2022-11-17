@@ -20,16 +20,24 @@ const Navbar = () => {
           <nav className="intro">
             <ul>
               <li>
-                <a href="#Collection" id="Check_Collection">Collection</a>
+                <a href="#Collection" id="Check_Collection">
+                  Collection
+                </a>
               </li>
               <li>
-                <a href="#Mint" id="Mint_it">Mint</a>
+                <a href="#Mint" id="Mint_it">
+                  Mint
+                </a>
               </li>
               <li>
-                <a href="#Faq" id="FAQ">FAQ</a>
+                <a href="#Faq" id="FAQ">
+                  FAQ
+                </a>
               </li>
               <li>
-                <a href="#About" id="About_us">About</a>
+                <a href="#About" id="About_us">
+                  About
+                </a>
               </li>
             </ul>
           </nav>
