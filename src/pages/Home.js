@@ -1,17 +1,20 @@
 import React from 'react';
-import Mint from '../components/Mint/Mint';
-import WalletClient from '../components/WalletClient/WalletClient';
+import Hero from '../components/Hero/Hero';
+import Navbar from '../components/NavBar/Navbar'
+import MintGeneral from '../components/MintGeneral/MintGeneral';
+import Footer from '../components/Footer/Footer';
+import Collection from '../components/Collection/Collection';
+import About from '../components/About/About';
 
 const Home = () => {
   return (
     <>
-      <div className='homeContainer'>
-        <h1>Minimal Mint</h1>
-        <div className='modulesContainer'>
-          <WalletClient />
-          <Mint />
-        </div>
-      </div>
+      <Navbar />
+      <Hero />
+      <Collection />
+      <MintGeneral />
+      <About />
+      <Footer />
     </>
   );
 };

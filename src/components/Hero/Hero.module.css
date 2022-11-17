@@ -1,0 +1,5 @@
+.carruselprincipal{
+    background-position: 0px 0px, 50% 50%, 0px 0px;
+    background-size: auto, cover, auto;
+	background-repeat: repeat, no-repeat, repeat;
+}
