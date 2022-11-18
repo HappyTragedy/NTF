@@ -1,38 +1,46 @@
 import React from "react";
 import styles from "../Collection/Collection.module.css";
+import img1 from "../../assets/1.png";
+import img9 from "../../assets/9.png";
+import img26 from "../../assets/26.png";
+import img36 from "../../assets/36.png";
+import img39 from "../../assets/39.png";
 
 const Collection = () => {
   return (
-    <section id="Collection"
-      style={{ backgroundColor: `yellow` }}
-      className={styles["carruselprincipal"]}
-    >
-      <article>
-        <div>
-          <h4>Hello, my name is</h4>
-          <h1>JACKIE WILSON</h1>
-          <p>
-            Our ships have
-            <a href="contact.html">completed</a>
-            their scan of the area and found nothing. If the
-            <a href="contact.html">Millenium Falcon</a>
-            went into light-speed, it'll be on the other side of the galaxy by
-            now. He says he's the
-            <a href="contact.html">property</a>
-            of Obi-Wan Kenobi, a resident of these parts. And it's a private
-            message for him.
-          </p>
-          <div>
-            <a className="boton" href="works.html">
-              SELECTED WORKS
-            </a>
-            <a className="boton2" href="about.html">
-              MORE ABOUT ME
-            </a>
-          </div>
-        </div>
-      </article>
-    </section>
+    <>
+      <div className={styles["Collection"]}>
+        <div
+          className={styles["item"]}
+          style={{ backgroundImage: `url(${img1})` }}
+        ></div>
+
+        <div
+          className={styles["item"]}
+          style={{ backgroundImage: `url(${img9})` }}
+        ></div>
+
+        <div
+          className={styles["item"]}
+          style={{ backgroundImage: `url(${img26})` }}
+        ></div>
+
+        <div
+          className={styles["item"]}
+          style={{ backgroundImage: `url(${img36})` }}
+        ></div>
+
+        <div
+          className={styles["item"]}
+          style={{ backgroundImage: `url(${img39})` }}
+        ></div>
+      </div>
+
+      <div className={styles["text"]}>
+        <h3>Fly with them</h3>
+        <p>ajvkbawoenfpawiefnaoifendo</p>
+      </div>
+    </>
   );
 };
 

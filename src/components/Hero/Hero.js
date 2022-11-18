@@ -1,31 +1,46 @@
 import React from "react";
 import styles from "../Hero/Hero.module.css";
-import background from "../../assets/logo.png";
-
+import WalletButton from "../WalletButton/WalletButton";
 
 const Hero = () => {
   return (
-    <section style={{ backgroundImage: `url(${background})` }} className={styles['carruselprincipal']}>
-            <article>
-                <div>
-                    <h4>Hello, my name is</h4>
-                    <h1>JACKIE WILSON</h1>
-                    <p>
-                        Our ships have
-                        <a href="contact.html">completed</a>
-                        their scan of the area and found nothing. If the
-                        <a href="contact.html">Millenium Falcon</a>
-                        went into light-speed, it'll be on the other side of the galaxy by now. He says he's the
-                        <a href="contact.html">property</a>
-                        of Obi-Wan Kenobi, a resident of these parts. And it's a private message for him.
-                    </p>
-                    <div>
-                        <a className="boton" href="works.html">SELECTED WORKS</a>
-                        <a className="boton2" href="about.html">MORE ABOUT ME</a>
-                    </div>
-                </div>
-            </article> 
-        </section>
+    <section id={styles["heroNavbar"]}>
+      <div className={styles["navbar"]}>
+        <div className={styles["logo"]}>
+          <img src="assets/logo.png" width="" height="" alt="logo-persona" />
+        </div>
+        <div className={styles["intro"]}>
+          <ul>
+            <li>
+              <a href="#Collection" id="Check_Collection">
+                Collection
+              </a>
+            </li>
+            <li>
+              <a href="#Mint" id="Mint_it">
+                Mint
+              </a>
+            </li>
+            <li>
+              <a href="#Faq" id="FAQ">
+                FAQ
+              </a>
+            </li>
+            <li>
+              <a href="#About" id="About_us">
+                About
+              </a>
+            </li>
+          </ul>
+        </div>
+        <WalletButton />
+      </div>
+
+      <div className={styles["container"]}>
+        <h2 className={styles["title"]}>Welcome to</h2>
+        <h1 className={styles["subtitle"]}>HAUNTED JOURNEYS</h1>
+      </div>
+    </section>
   );
 };
 

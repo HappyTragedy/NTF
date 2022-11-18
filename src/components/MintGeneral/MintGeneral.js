@@ -1,11 +1,12 @@
 import React from "react";
 import WalletClient from "../WalletClient/WalletClient";
+import styles from "../MintGeneral/MintGeneral.module.css"
 
 const MintGeneral = () => {
   return (
     <>
-      <div id="Mint" className="homeContainer">
-        <h1>Minimal Mint</h1>
+      <div id={styles["Mint"]}>
+        <h1>Mint your Traveler</h1>
         <div className="modulesContainer">
           <WalletClient />
         </div>

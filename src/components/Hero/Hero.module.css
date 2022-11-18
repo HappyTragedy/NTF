@@ -1,5 +1,50 @@
-.carruselprincipal{
-    background-position: 0px 0px, 50% 50%, 0px 0px;
-    background-size: auto, cover, auto;
-	background-repeat: repeat, no-repeat, repeat;
+#heroNavbar{
+    height: 100vh;
+    background-image: url("../../assets/halloween.webp");
+    background-size: cover;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    background-color: transparent;
+}
+
+.logo{
+    text-align: center;
+    margin-top: 2%;
+    width: 20%;
+}
+
+.logo img{
+    width: 60%;
+}
+
+.intro{
+    padding-right: 7%;
+    margin: 0 auto;
+}
+
+ul{
+    padding: 0;
+}
+
+li{
+    display: inline;
+    padding: 0px 65px;
+}
+
+li a{
+    color: white;
+    text-decoration: none;
+}
+
+.container{
+    text-align: center;
+    margin-top: 11%;
+}
+
+.title, .subtitle{
+    color: white;
 }

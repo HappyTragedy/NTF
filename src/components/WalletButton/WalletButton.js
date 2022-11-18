@@ -23,7 +23,7 @@ const WalletButton = () => {
       {!wallet.provider
         ? `Connect wallet`
         : address
-        ? `Disconnect wallet ${truncateWeb3Address(address)}`
+        ? `${truncateWeb3Address(address)}`
         : `Connect wallet`}
     </button>
   );

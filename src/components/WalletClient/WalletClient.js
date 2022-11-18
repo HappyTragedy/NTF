@@ -10,6 +10,7 @@ import {
 import WalletButton from "../WalletButton/WalletButton";
 import Web3 from "web3";
 import { factoryAddress, factoryAbi } from "../../services/onboard/contract";
+import styles from "../WalletClient/WalletClient.module.css"
 
 const WalletClient = () => {
   const [quantity, setquantity] = useState(1);
@@ -132,10 +133,10 @@ const WalletClient = () => {
   button(1);*/
 
   return onboard ? (
-    <div className="wallet-client">
+    <div className={styles["wallet-client"]}>
       {!wallet.provider ? (
         <div>
-          <h2>How hungry are you?</h2>
+          <h2>Get ready to travel</h2>
           <h4>Connect to Wallet!</h4>
           <p>
             Price: <span>0,000000000000000005ETH</span>
@@ -145,18 +146,13 @@ const WalletClient = () => {
       ) : (
         <div>
           <div>
-            {wallet.icons && (
-              <img src={wallet.icons.iconSrc} alt={wallet.name} />
-            )}
-          </div>
-          <div>
             <h4>Connected with {wallet.name}</h4>
             <p>
               Price: <span>{price} ETH</span>
             </p>
             <p>Balance {userBalance} eth</p>
-            <div className="cart">
-              <div className="addRemove">
+            <div className={styles["cart"]}>
+              <div className={styles["addRemove"]}>
                 {/*<button className={styles["minus"]} onClick={button(-1)}>
                   -
                 </button>
@@ -168,7 +164,10 @@ const WalletClient = () => {
                 <button className={styles["plus"]} onClick={button(1)}>
                   +
             </button>*/}
-                <button disabled={quantity === 1 ? true : false} onClick={minus}>
+                <button
+                  disabled={quantity === 1 ? true : false}
+                  onClick={minus}
+                >
                   -
                 </button>
                 <label> {quantity} </label>
