@@ -1,0 +1,56 @@
+h2,
+p,
+label,
+span {
+  color: white;
+}
+
+p {
+  font-family: "Calibri";
+}
+
+.wallet-client {
+  text-align: center;
+}
+
+.wallet-client h2 {
+  margin-bottom: 5%;
+  font-size: 2.2em;
+}
+
+.wallet-client p{
+  margin: 10% 0%;
+}
+
+button {
+  color: rgb(33, 33, 33);
+}
+
+.cart {
+  margin: 5% 2%;
+}
+
+.addRemove {
+  display: flex;
+  justify-items: center;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgba(33, 33, 33, 0.525);
+  font-family: "Family";
+}
+
+.addRemove button {
+  width: 12%;
+  margin: 0;
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  padding: 0% 2%;
+}
+
+.mint {
+  margin: 0 auto;
+  margin-top: 12%;
+}

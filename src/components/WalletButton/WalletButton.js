@@ -6,6 +6,8 @@ import {
   useWallet,
 } from "../../contexts/OnboardContext";
 import { truncateWeb3Address } from "../../services/onboard/helpers";
+import billetera from "../../assets/images/wallet.png";
+import styles from "./WalletButton.module.css";
 
 const WalletButton = () => {
   const { linkWallet, resetWallet } = useOnboardContext();
@@ -15,11 +17,13 @@ const WalletButton = () => {
 
   return (
     <button
+      className={styles["connect"]}
       onClick={
         !wallet.provider ? linkWallet : address ? resetWallet : linkWallet
       }
       disabled={onboard ? false : true}
     >
+      <img src={billetera} alt="wallet" />
       {!wallet.provider
         ? `Connect wallet`
         : address

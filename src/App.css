@@ -4,13 +4,13 @@
   padding: 0;
 }
 
-.App.App {
-  background-color: #282c34;
+.App {
+  background-color: rgb(33, 33, 33);
   min-height: 100vh;
 }
 
-h1{
-  margin:0;
+h1 {
+  margin: 0;
   color: white;
   font-size: 60px;
   text-align: center;
@@ -27,7 +27,7 @@ h1{
   gap: 40px;
 }
 
-.modulesContainer{
+.modulesContainer {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -49,17 +49,20 @@ h1{
 }
 
 .App button {
-  background-color: rgb(24, 24, 24);
-  border-radius: 60px;
+  background-color: rgba(249, 206, 98, 0.86);
   border: 0;
-  color: white;
-  padding: 20px 40px;
+  color: rgb(33, 33, 33);
+  padding: 12px 10px;
+  font-family: "Calibri";
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 auto;
 }
 .App button:hover {
-  background-color: gray;
+  background-color: rgb(255, 225, 148);
   cursor: pointer;
 }
 .App button:disabled {
-  background-color: red;
-  cursor:crosshair;
+  background-color: rgba(255, 225, 148, 0.473);
+  cursor: no-drop;
 }

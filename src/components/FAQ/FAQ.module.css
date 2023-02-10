@@ -1,0 +1,11 @@
+#Faq{
+    background-image: url("../../assets/images/pumpkin.png");
+    background-size: cover;
+    height: 100vh;
+    margin-bottom: 10%;
+}
+
+#Faq h1{
+    margin-top: 12%;
+    font-size: 4em;
+}

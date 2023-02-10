@@ -1,0 +1,120 @@
+.footer {
+  width: 100%;
+  height: 70vh;
+  background-color: rgb(33, 33, 33);
+}
+
+.Content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.izquierda {
+  left: -45px;
+}
+
+.izquierda,
+.derecha {
+  position: relative;
+  width: 100%;
+}
+
+.izquierda img,
+.derecha img {
+  width: 50%;
+}
+
+.img1 {
+  transform: translateY(525px);
+  bottom: 0;
+  left: 44px;
+  position: absolute;
+}
+
+.img2 {
+  position: absolute;
+  bottom: -460px;
+  right: 14px;
+}
+
+.img3 {
+  transform: translateY(460px);
+  bottom: 0;
+  right: 220px;
+  position: absolute;
+}
+
+.img4 {
+  position: absolute;
+  bottom: -525px;
+  right: 10px;
+}
+
+.centro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+}
+
+.nft h1 {
+  font-size: 5em;
+  margin: 0% 0% 10% 0%;
+}
+
+.sub {
+  width: 100%;
+}
+
+.sub form {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.sub input {
+  padding: 5% 7%;
+  border-radius: 10px;
+  margin-right: 2%;
+  font-family: "Calibri";
+  font-size: 15px;
+}
+
+.sub button {
+  padding: 4.7% !important;
+  display: block;
+  width: 40% !important;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.redes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 8% 0% 15% 0%;
+  width: 85%;
+}
+
+.redes img {
+  width: 100%;
+  margin: 12% 0%;
+  padding: 0% 20%;
+}
+
+.credits {
+  text-align: center;
+}
+
+.credits p {
+  font-size: 16px;
+}
+
+.credits a {
+  text-decoration: none;
+  color: white;
+  font-family: "Calibri";
+  font-style: italic;
+  font-weight: bold;
+}

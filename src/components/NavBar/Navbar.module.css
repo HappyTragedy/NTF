@@ -1,27 +1,30 @@
-.navbar{
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: space-between;
-    background-color: transparent;
-    position: fixed;
+.navbar {
+  display: grid;
+  background-color: transparent;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+  padding-top: 2%;
 }
 
-.navbar img{
-    width: 20%;
-    margin: 2%;
+.logo {
+  width: 25%;
+  margin-left: 10%;
 }
 
-ul{
-    padding: 0;
+ul {
+  padding: 0;
 }
 
-li{
-    display: inline;
+li {
+  display: inline;
+  padding: 0px 50px;
 }
 
-li a{
-    color: white;
-    text-decoration: none;
-    padding: 0px 7px;
+li a {
+  color: rgba(249, 206, 98, 0.799);
+  text-decoration: none;
+  font-family: "Calibri";
+  font-weight: bold;
+  font-size: 18px;
 }

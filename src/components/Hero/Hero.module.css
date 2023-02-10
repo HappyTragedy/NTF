@@ -1,50 +1,36 @@
-#heroNavbar{
-    height: 100vh;
-    background-image: url("../../assets/halloween.webp");
-    background-size: cover;
+#heroNavbar {
+  height: 100vh;
+  background-image: url("../../assets/images/grave2.png");
+  background-size: cover;
+  background-position: bottom;
+  margin-bottom: 5%;
 }
 
-.navbar{
-    display: flex;
-    align-items: center;
-    align-content: center;
+.navbar {
+  display: grid;
     background-color: transparent;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
 }
 
-.logo{
-    text-align: center;
-    margin-top: 2%;
-    width: 20%;
+.container {
+  text-align: center;
+  margin-top: 11%;
 }
 
-.logo img{
-    width: 60%;
+.title,
+.subtitle {
+  color: white;
 }
 
-.intro{
-    padding-right: 7%;
-    margin: 0 auto;
+.title{
+  font-family: "Calibri";
+  font-weight: 400;
+  font-size: 2em;
 }
 
-ul{
-    padding: 0;
-}
-
-li{
-    display: inline;
-    padding: 0px 65px;
-}
-
-li a{
-    color: white;
-    text-decoration: none;
-}
-
-.container{
-    text-align: center;
-    margin-top: 11%;
-}
-
-.title, .subtitle{
-    color: white;
+.subtitle{
+  margin-top: 2%;
+  font-size: 5em;
 }

@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState /*useEffect*/ } from "react";
 import {
   useAddress,
   useOnboard,
   useWallet,
   useWalletProvider,
-  useBalance,
+  /*useBalance,*/
 } from "../../contexts/OnboardContext";
-/*import { truncateWeb3Address } from "../../services/onboard/helpers";*/
+import { truncateWeb3Address } from "../../services/onboard/helpers";
 import WalletButton from "../WalletButton/WalletButton";
 import Web3 from "web3";
 import { factoryAddress, factoryAbi } from "../../services/onboard/contract";
-import styles from "../WalletClient/WalletClient.module.css"
+import styles from "../WalletClient/WalletClient.module.css";
 
 const WalletClient = () => {
   const [quantity, setquantity] = useState(1);
@@ -18,15 +18,15 @@ const WalletClient = () => {
   const onboard = useOnboard();
   const wallet = useWallet();
   const address = useAddress();
-  const balance = useBalance();
+  /*const balance = useBalance();*/
   const provider = useWalletProvider();
   const web3 = new Web3(provider);
 
   const cantidad = (quantityValue) => setquantity(quantityValue);
 
-  const [userBalance, setUserBalance] = useState(0);
+  /*const [userBalance, setUserBalance] = useState(0);*/
 
-  useEffect(() => {
+  /*useEffect(() => {
     if (address) {
       if (balance) {
         const valueEth = web3.utils.fromWei(`${balance}`, "ether");
@@ -36,7 +36,7 @@ const WalletClient = () => {
     } else {
       setUserBalance(0);
     }
-  }, [web3.utils, balance, address]);
+  }, [web3.utils, balance, address]);*/
 
   const handleMint = async () => {
     console.log("MINT!");
@@ -113,25 +113,6 @@ const WalletClient = () => {
     }
   };
 
-  /*let cantidad = document.getElementsByClassName("cantidad").defaultValue;
-  const minus = 1;
-  const plus = 2;
-
-  cantidad = 1;
-
-  function button(num) {
-    cantidad = cantidad + num;
-    if (cantidad === minus) {
-      document.getElementsByClassName("minus").disabled = true;
-      document.getElementsByClassName("plus").disabled = false;
-    } else if (cantidad === plus) {
-      document.getElementsByClassName("plus").disabled = true;
-      document.getElementsByClassName("minus").disabled = false;
-    }
-  }
-
-  button(1);*/
-
   return onboard ? (
     <div className={styles["wallet-client"]}>
       {!wallet.provider ? (
@@ -145,53 +126,36 @@ const WalletClient = () => {
         </div>
       ) : (
         <div>
-          <div>
-            <h4>Connected with {wallet.name}</h4>
-            <p>
-              Price: <span>{price} ETH</span>
-            </p>
-            <p>Balance {userBalance} eth</p>
-            <div className={styles["cart"]}>
-              <div className={styles["addRemove"]}>
-                {/*<button className={styles["minus"]} onClick={button(-1)}>
-                  -
-                </button>
-                <input
-                  type="numeric"
-                  className={styles["cantidad"]}
-                  defaultValue={cantidad}
-                />
-                <button className={styles["plus"]} onClick={button(1)}>
-                  +
-            </button>*/}
-                <button
-                  disabled={quantity === 1 ? true : false}
-                  onClick={minus}
-                >
-                  -
-                </button>
-                <label> {quantity} </label>
-                <button disabled={quantity === 2 ? true : false} onClick={plus}>
-                  +
-                </button>
-              </div>
+          <h2>Connected with {wallet.name}</h2>
+          <p>Price per Traveler</p>
+          <span>{price} ETH</span>
+          <div className={styles["cart"]}>
+            <div className={styles["addRemove"]}>
+              <button disabled={quantity === 1 ? true : false} onClick={minus}>
+                -
+              </button>
+              <label> {quantity} </label>
+              <button disabled={quantity === 2 ? true : false} onClick={plus}>
+                +
+              </button>
             </div>
+          </div>
+          <div className={styles["price"]}>
             <span>Total: </span>
             <span>{(price * quantity).toFixed(2)} ETH</span>
-            {/*<div class="quantity_quantity_wrapper__1KAwk">
-              <button>-</button>
-              <span>10</span>
-              <button disabled="">+</button>
-              </div>*/}
-            <button disabled={!address ? true : false} onClick={handleMint}>
-              Mint
-            </button>
-            {/*{address ? (
-              <p>{truncateWeb3Address(address)}</p>
-            ) : (
-              <p>Please connect your {wallet.name} wallet to use the app.</p>
-            )}*/}
           </div>
+          <button
+            className={styles["mint"]}
+            disabled={!address ? true : false}
+            onClick={handleMint}
+          >
+            Mint
+          </button>
+          {address ? (
+            <p>{truncateWeb3Address(address)}</p>//Sacar?
+          ) : (
+            <p>Please connect your {wallet.name} wallet to use the app.</p>
+          )}
         </div>
       )}
     </div>

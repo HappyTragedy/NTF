@@ -1,0 +1,15 @@
+button img{
+    width: 15% !important;
+}
+
+.connect{
+    width: 50% !important;
+    border-radius: 15px;
+}
+
+button, .connect{
+    width: 25%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
